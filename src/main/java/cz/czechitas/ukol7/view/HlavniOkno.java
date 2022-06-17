@@ -1,6 +1,5 @@
 package cz.czechitas.ukol7.view;
 
-
 import cz.czechitas.ukol7.Aplikace;
 import cz.czechitas.ukol7.controller.PreferenceController;
 import cz.czechitas.ukol7.formbuilder.FormBuilder;
@@ -11,6 +10,7 @@ import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;
 import java.awt.*;
+
 
 public class HlavniOkno extends JFrame {
     private final PreferenceController controller;
@@ -29,7 +29,7 @@ public class HlavniOkno extends JFrame {
     private void init() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setIconImage(new ImageIcon(Aplikace.class.getResource("czechitas-icon.png")).getImage());
-        setLayout(new MigLayout("wrap 2", "[right]rel[50:75:250,grow,fill]unrel[right]rel[50:75:250,grow,fill]"));
+        setLayout(new MigLayout("wrap 2", "[right,100]rel[50:75:250,grow,fill]"));
         setMinimumSize(new Dimension(400, 200));
 
 
@@ -37,9 +37,9 @@ public class HlavniOkno extends JFrame {
                 .container(this);
 
         formBuilder
-                .label("Přezdívka")
+                .label("&Přezdívka")
                 .textField("prezdivka")
-                .add();
+                .add("span");
 
         formBuilder
                 .label("&Oblibená barva")

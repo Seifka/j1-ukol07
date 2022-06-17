@@ -36,15 +36,16 @@ public class PreferenceController {
     }
 
     private void vypoctiStavAkci() {
-        PreferenceBean osobaBean = model.getBean();
+        PreferenceBean PreferenceBean = model.getBean();
         ulozitAction.setEnabled(
-                osobaBean.getPrezdivka() != null
-                        && osobaBean.getOblibenaBarva() != null
+                PreferenceBean.getPrezdivka() != null
+                        && PreferenceBean.getOblibenaBarva() != null
         );
     }
 
     public void handleUlozit() {
         PreferenceBean bean = this.model.getBean();
+
     }
 
 }

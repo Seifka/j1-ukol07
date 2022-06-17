@@ -2,6 +2,7 @@ package cz.czechitas.ukol7.model;
 
 import com.jgoodies.binding.beans.ExtendedPropertyChangeSupport;
 import com.jgoodies.common.bean.ObservableBean;
+import cz.czechitas.ukol7.model.Barvy;
 
 import java.beans.PropertyChangeListener;
 
@@ -26,7 +27,7 @@ public class PreferenceBean implements ObservableBean {
     }
 
     public void setOblibenaBarva(String oblibenaBarva) {
-        String oldValue = this.prezdivka;
+        String oldValue = this.oblibenaBarva;
         this.oblibenaBarva = oblibenaBarva;
         pcs.firePropertyChange("oblibena barva", oldValue, oblibenaBarva);
     }
@@ -40,5 +41,6 @@ public class PreferenceBean implements ObservableBean {
     public void removePropertyChangeListener(PropertyChangeListener listener) {
         pcs.removePropertyChangeListener(listener);
     }
+
 }
 
