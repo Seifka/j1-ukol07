@@ -6,5 +6,4 @@ public enum Barvy {
     modrá,
     fialová,
     žlutá,
-    růžová
 }

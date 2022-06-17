@@ -16,3 +16,4 @@ public class Aplikace extends JFrame {
         //new HlavniOkno(new PreferenceController()).start();
     }
 }
+
